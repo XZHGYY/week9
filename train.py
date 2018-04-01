@@ -124,7 +124,7 @@ upsampled_logits = tf.nn.conv2d_transpose(upsampled_logits, upsample_filter_tens
                                           padding='SAME')
 
 # pool345 -- 8x+prediction
-upsampled_logits = upsampled_logits + aux_logits_8x
+upsampled_logits = upsampled_logits + aux_logits_8s
 
 upsample_filter_np_x8 = bilinear_upsample_weights(upsample_factor,
                                                    number_of_classes)
